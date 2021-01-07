@@ -19,7 +19,7 @@ import net.thucydides.core.annotations.WithTag;
 import net.thucydides.core.annotations.WithTags;
 import net.thucydides.junit.annotations.UseTestDataFrom;
 
-@UseTestDataFrom("testData\\userinfo.csv")
+@UseTestDataFrom("testData\\userInfo.csv")
 @RunWith(SerenityParameterizedRunner.class)
 public class GetUsersTest extends TestBase {
 	
