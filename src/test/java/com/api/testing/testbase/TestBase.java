@@ -1,4 +1,4 @@
-package com.api.testing.junit.testbase;
+package com.api.testing.testbase;
 
 import org.junit.BeforeClass;
 
