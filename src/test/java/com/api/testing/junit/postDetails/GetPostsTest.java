@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.api.testing.cucumber.serenity.PostsSerenitySteps;
+import com.api.testing.cucumber.serenity.UsersSerenitySteps;
 import com.api.testing.testbase.TestBase;
 
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
@@ -16,12 +17,11 @@ import net.thucydides.core.annotations.WithTag;
 import net.thucydides.core.annotations.WithTags;
 import net.thucydides.junit.annotations.UseTestDataFrom;
 
-public class GetPostsTest {
 
 
 @UseTestDataFrom("testData\\userinfo.csv")
 @RunWith(SerenityParameterizedRunner.class)
-public class GetPostsTest extends TestBase{
+public class GetPostsTest  extends TestBase{
 	
 	 private static String username;
 	
@@ -32,7 +32,7 @@ public class GetPostsTest extends TestBase{
 	  public void setUsername(String username)
 	  { this.username = username; }
 	
-	UserSerenitySteps uSteps=new UserSerenitySteps();
+	UsersSerenitySteps uSteps=new UsersSerenitySteps();
 	PostsSerenitySteps pSteps=new PostsSerenitySteps();
 	String userId = null;
 	
@@ -66,6 +66,4 @@ public class GetPostsTest extends TestBase{
 	 assertThat(pSteps.getPostsDetailsByUserId(userId),is(notNullValue()));
 		  		  
 		 }
-}
-
 }
